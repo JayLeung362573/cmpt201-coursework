@@ -22,9 +22,9 @@ int main(void) {
   const char *delim = " ";
   char *saveptr = NULL;
   char *ret = strtok_r(buff, delim, &saveptr);
-
+  printf("Tokens: \n");
   while (ret != NULL) {
-    printf("token: \"%s\"\n", ret);
+    printf("  %s\n", ret);
     ret = strtok_r(NULL, delim, &saveptr);
   }
 
